@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header-wrap flex-row">
+        <button id="loginBtn" class="btn" data-type="login">로그인</button>
+        <button id="bookBtn" class="btn" data-type="book">예약</button>
+    </header>
+    <main class="main-wrap">
+        <section id="loginSection" class="section flex-column">
+            <div class="login-form flex-column">
+                <input id="userId" class="input-default" type="text" value="">
+                <input id="userPw" class="input-default" type="password" value="">
+                <div>
+                    <button id="loginFeatBtn" class="btn">로그인</button>
+                    <button id="joinFeatBtn" class="btn">회원가입</button>
+                </div>
+            </div>
+        </section>
+        <section id="bookSection" class="section flex-column d-none">
+            예약 페이지
+        </section>
+    </main>
+    <footer class="footer-wrap">
+
+    </footer>
+
+    <script>
+        const headerWrap = document.querySelector(".header-wrap");
+        const sections = document.querySelectorAll(".section");
+
+        /**
+         * 헤더 내부 버튼 클릭 핸들러 함수
+         **/ 
+        const headerBtnHandler = (e) => {
+            if(e.target === headerWrap.children[0]) {
+                sections[1].classList.add("d-none");
+                sections[0].classList.remove("d-none");
+            }else if(e.target === headerWrap.children[1]) {
+                sections[0].classList.add("d-none");
+                sections[1].classList.remove("d-none");
+            }
+        }
+
+        // 이벤트 위임을 통한 이벤트 핸들러 함수 등록
+        headerWrap.addEventListener("click", headerBtnHandler);
+    </script>
+    <script type="module" src="./index.js"></script>
+</body>
+</html>

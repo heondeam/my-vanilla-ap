@@ -1,0 +1,62 @@
+.main-wrap {
+
+}
+
+.header-wrap {
+    height: 100px;
+    width: 100%;
+    padding: 0 2cqmax;
+    border-bottom: 1px solid #ececec;
+}
+
+.footer-wrap {
+
+
+}
+
+.flex-row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    width: 100px;
+    padding: 15px 0;
+    border-radius: 15px;
+    background-color: #189bfa;
+    color: white;
+    cursor: pointer;
+}
+
+.section {
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+
+.d-none {
+    display: none;
+}
+
+.input-default {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #ececec;
+}
+
+.login-form {
+    width: 300px;
+    gap: 25px 0;
+}
+
+.w-100 {
+    width: 100%;
+}
